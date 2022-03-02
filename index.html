@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <head>
+
+        <script>
+            document.write("Hello <br />");
+    
+            //1 Esercizio
+            var paragrafo1 = document.getElementById("paragraph-test").innerHTML;
+            console.log(paragrafo1);
+            document.write("Il paragrafo contiene: " + paragrafo1 + "<br />");
+    
+    
+            //2 Esercizio
+            var elementiParagrafi = document.getElementsByTagName("p");
+            console.log(elementiParagrafi);
+            document.write("I paragrafi contengono: " + elementiParagrafi + "<br />");
+    
+    
+            //3 Esercizio
+    
+            function validaContenuto() {
+                let numeroUtente = document.getElementById("inputUtente").value;
+                console.log(numeroUtente);
+    
+                if (numeroUtente >= 1 && numeroUtente <= 100) {
+                   // let risultato = document.write(`<font color='blue'>Testo Valido</font>`);
+    
+                    document.getElementById("risultato").innerHTML = `<font color='blue'>Testo Valido</font>`;
+                  //  console.log(risultato);
+    
+                   // let print = document.getElementById("risultato").innerHTML;
+                   // console.log(print);
+                  
+                } else {
+                   // document.write(`<font color='red'>Input non valido</font>`);
+    
+                   document.getElementById("risultato").innerHTML = `<font color='red'>Input non valido</font>`;
+                }
+            }
+    
+        </script>
+    </head>
+
+    <h2>Radio Buttons</h2>
+
+    <p id="paragraph-test" class="class-test">Choose your favorite Web language:</p>
+
+
+
+    <form id="form-id" name="form-name">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label> <br>
+        <input type="text" id="inputUtente">Inserisci
+      
+
+    
+    </form>
+    <button onclick="validaContenuto()" >Valida</button>
+    <p id="risultato"></p>
+
+   
+
+
+
+
+
+
+</body>
+
+</html>

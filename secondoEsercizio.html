@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secondo Esercizio</title>
+</head>
+
+<body>
+    <div id="primo" style="background-color: white" onmouseover="mouseSu()" onmouseout="mouseVia()">
+        Primo DIV
+    </div>
+
+    <div id="secondo" style="background-color: black"onmouseover="mouseSu()" onmouseout="mouseVia()">
+        Secondo DIV
+    </div>
+
+
+    <script>
+        function mouseSu(){
+            // assegna lo stile dello sfondo al div quando il mouse passa su
+            document.getElementById("primo").setAttribute("style",`background-color: green`); 
+            document.getElementById("secondo").setAttribute("style",`background-color: red`);
+        }
+
+        function mouseVia(){
+            // assegna lo stile dello sfondo al div quando il mouse va via
+            document.getElementById("primo").setAttribute("style", `background-color: white`);
+            document.getElementById("secondo").setAttribute("style", `background-color: black`);
+        }
+    </script>
+</body>
+
+</html>
